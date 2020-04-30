@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style>
+        .signup{
+            border-right: 1px solid black;
+        }
+    </style>
+    <title>Login Page</title>
+</head>
+<body>
+    
+    <div class="container">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="container">
+            <div class="card login-signup">
+                <div class="row">
+                    <div class="col s6 signup center">
+                        <h4>Sign-Up</h4>
+                        <div class="container center">
+                            <p>If you dont have an account, sign up here!.</p>
+                        </div>
+                        <br>
+                        <form class="form-signup">
+                            <div class="input-field">
+                                <input type="text" id="signup-firstname">
+                                <label for="signup-firstname">Enter Your First Name</label>
+                            </div>
+                            <br>
+                            <div class="input-field">
+                                <input type="text" id="signup-lastname">
+                                <label for="signup-lastname">Enter Your Last Name</label>
+                            </div>
+                            <br>
+                            <div class="input-field">
+                                <input type="email" id="signup-email">
+                                <label for="signup-email">Enter Your Email Address</label>
+                            </div>
+                            <br>
+                            <div class="input-field">
+                                <input type="password" id="signup-password">
+                                <label for="signup-password">Enter Your Password</label>
+                            </div>
+                            <br>
+                            <div class="container">
+                                <a class="waves-effect waves-light btn signup-btn" href="#" id="signup-btn">Sign-Up <i class="fas fa-user-plus"></i></a>
+                            </div>
+                            <br>
+                        </form>
+                    </div> 
+                    <div class="col s6 login center">
+                        <h4>Login</h4>
+                        <div class="container center">
+                            <p>If you already have an account, login here.</p>
+                        </div>
+                        <br>
+                        <form class="form-login">
+                            <div class="input-field">
+                                <input type="email" id="login-email">
+                                <label for="login-email">Enter Your Email Address</label>
+                            </div>
+                            <br>
+                            <div class="input-field">
+                                <input type="password" id="login-password">
+                                <label for="login-password">Enter Your Password</label>
+                            </div>
+                            <br>
+                            <div class="container">
+                                <a class="waves-effect waves-light btn" href="blogs.html">Login <i class="fas fa-user-plus"></i></a>
+                            </div>
+                            <br>
+                        </form>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyBwXGcEa-CldCLo4csRlIpjTm7nmcP6UIg",
+        authDomain: "ne-trucking.firebaseapp.com",
+        databaseURL: "https://ne-trucking.firebaseio.com",
+        projectId: "ne-trucking",
+        storageBucket: "ne-trucking.appspot.com",
+        messagingSenderId: "396709983119",
+        appId: "1:396709983119:web:f04451efcbc92614de51fa",
+        measurementId: "G-1MBJ25165V"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./login.js"></script>  
+    <script src="signup.js"></script>  
+</body>
+</html>

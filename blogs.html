@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Blog - Posts</title>
+</head>
+<body>
+    <div class="container input-container">
+        <div class="card input-card center">
+            <div class="card-content">
+                <span class="card-title">Submit Data</span>
+                <div class="container col-s12">
+                    <form class="input-form">
+                        <div class="input-field row s6">
+                            <input id="firstname-input" type="text">
+                            <label for="firstname-input">Enter Your First Name</label>
+                        </div>
+                        <div class="input-field row s6">
+                            <input id="lastname-input" type="text">
+                            <label for="lastname-input">Enter Your Last Name</label>
+                        </div>
+                        <div class="input-field row s6">
+                            <input id="username-input" type="text">
+                            <label for="username-input">Enter Your Username</label>
+                        </div>
+                        <div class="input-field row s6">
+                            <input id="email-input" type="text">
+                            <label for="email-input">Enter Your E-mail</label>
+                        </div>
+                        <div class="buttons">
+                            <button href="#" class="btn waves-effect waves-light" type="submit" id="submit-btn">Submit</button>
+                            <button href="#" class="btn waves-effect waves-light orange" type="update" id="edit-btn">Update</button>
+                            <button href="#" class="btn waves-effect waves-light red" type="remove" id="delete-btn">Remove</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container center">
+       <div class="card data-card">
+            <span class='card-title'>Data Fetched From Database</span>
+            <div class="card-content">
+                <div class="database-content">
+                    <ul class="collection">
+                        <!--
+                        <li class="collection-item">
+                            <div class="container">
+                                <h4 id="user-id">Some Unique ID</h4>
+                                <span class="paragraph">Some FirstName</span>
+                                <br>
+                                <span class="paragraph">Some LastName</span>
+                                <br>
+                                <span class="paragraph">Some CompanyName</span>
+                                <br>
+                                <span class="paragraph">Some Email</span>
+                            </div>
+                        </li>
+                        -->
+                    </ul>
+                </div>
+            </div>
+       </div>
+    </div>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyBwXGcEa-CldCLo4csRlIpjTm7nmcP6UIg",
+        authDomain: "ne-trucking.firebaseapp.com",
+        databaseURL: "https://ne-trucking.firebaseio.com",
+        projectId: "ne-trucking",
+        storageBucket: "ne-trucking.appspot.com",
+        messagingSenderId: "396709983119",
+        appId: "1:396709983119:web:f04451efcbc92614de51fa",
+        measurementId: "G-1MBJ25165V"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./database.js"></script>    
+</body>
+</html>
