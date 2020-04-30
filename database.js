@@ -6,9 +6,11 @@ const submitBtn = document.getElementById('submit-btn');
 const editBtn = document.getElementById('edit-btn');
 const deleteBtn = document.getElementById('delete-btn');
 const dataList = document.querySelector('.collection');
+const logoutBtn = document.getElementById('logout-btn');
 
 const database = firebase.database();
 const rootRef = database.ref('users');
+const auth = firebase.auth();
 
 rootRef.orderByKey().on('value', snapshot =>{
     displayDatabase(snapshot.val());
@@ -137,3 +139,11 @@ function showAlert(message, className){
         }, 3000);
     }
 }
+
+logoutBtn.addEventListener('click', (e) =>{
+    e.preventDefault();
+    auth.signOut();
+    showAlert("Succesfully logged out!", "success");
+    window.location.href = "login.html";
+})
+
